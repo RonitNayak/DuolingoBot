@@ -4,7 +4,8 @@ import pyautogui, time
 pyautogui.FAILSAFE = True
 
 def clickContinue(x, y):
-    for i in range(x): 
+    print('clicking continue ', x, ' times, with a ', y, ' break between them')
+    for i in range(x):
         pyautogui.click(1488, 992) #clicks continue
         time.sleep(y) #pauses
         
@@ -174,5 +175,6 @@ if option is not None:
 clickContinue(5, 2)
 
 #re runs the program lol
+print('re-running program')
 pyautogui.click(200, 200) #clicks the python file
 pyautogui.press('f5')
